@@ -2,16 +2,14 @@
 <addon id="plugin.farmvivi.hikvision" name="Hikvision" version="0.0.1" provider-name="FarmVivi">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
-        <import addon="script.module.routing" version="0.2.0"/>
-
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
+        <provides>executable</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB"></summary>
         <description lang="en_GB"></description>
-        <language></language>
+        <language>en fr</language>
         <platform>all</platform>
         <license>MIT</license>
         <forum></forum>
@@ -22,7 +20,6 @@
         <disclaimer></disclaimer>
         <assets>
             <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>
 </addon>
