@@ -31,15 +31,15 @@ msgid "Port"
 msgstr ""
 
 msgctxt "#32005"
-msgid "Username"
+msgid "RTSP Port"
 msgstr ""
 
 msgctxt "#32006"
-msgid "Password"
+msgid "Username"
 msgstr ""
 
 msgctxt "#32007"
-msgid "Keybindings"
+msgid "Password"
 msgstr ""
 
 msgctxt "#32008"
@@ -47,29 +47,25 @@ msgid "PTZ"
 msgstr ""
 
 msgctxt "#32009"
-msgid "Right"
+msgid "Duration (in ms)"
 msgstr ""
 
 msgctxt "#32010"
-msgid "Left"
+msgid "Speed, key pressed (0 - 100)"
 msgstr ""
 
 msgctxt "#32011"
-msgid "Up"
+msgid "Speed, key held (0 - 100)"
 msgstr ""
 
 msgctxt "#32012"
-msgid "Down"
+msgid "Pan"
 msgstr ""
 
 msgctxt "#32013"
-msgid "Zoom in"
+msgid "Tilt"
 msgstr ""
 
 msgctxt "#32014"
-msgid "Zoom out"
-msgstr ""
-
-msgctxt "#32015"
-msgid "RTSP Port"
+msgid "Zoom"
 msgstr ""

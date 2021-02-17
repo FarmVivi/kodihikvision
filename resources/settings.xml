@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
     <category label="32002">
-        <!--TODO Remove default value-->
-        <setting label="32003" type="text" id="hikvision_ip" default="camera.home"/>
-        <!--TODO Change this default value to 8000-->
-        <setting label="32004" type="number" id="hikvision_port" default="61811"/>
-        <!--TODO Change this default value to 1024-->
-        <setting label="32015" type="number" id="hikvision_rtsp_port" default="1025"/>
-        <!--TODO Remove default value-->
-        <setting label="32005" type="text" id="hikvision_username" default="benvaiz"/>
-        <!--TODO Remove default value-->
-        <setting label="32006" type="text" id="hikvision_password" default="p569812m"/>
+        <setting label="32003" type="text" id="hikvision_ip"/>
+        <setting label="32004" type="number" id="hikvision_port" default="8000"/>
+        <setting label="32005" type="number" id="hikvision_rtsp_port" default="1024"/>
+        <setting label="32006" type="text" id="hikvision_username"/>
+        <setting label="32007" type="text" id="hikvision_password"/>
     </category>
-    <category label="32007">
-        <setting label="32008" type="lsep"/>
-        <setting label="32009" type="text" id="keybindings_ptz_right" default="d"/>
-        <setting label="32010" type="text" id="keybindings_ptz_left" default="q"/>
-        <setting label="32011" type="text" id="keybindings_ptz_up" default="z"/>
-        <setting label="32012" type="text" id="keybindings_ptz_down" default="s"/>
-        <setting label="32013" type="text" id="keybindings_ptz_zoom_in" default="a"/>
-        <setting label="32014" type="text" id="keybindings_ptz_zoom_out" default="e"/>
+    <category label="32008">
+        <setting label="32009" type="lsep"/>
+        <setting label="32012" type="number" id="ptz_duration_pan" default="1000"/>
+        <setting label="32013" type="number" id="ptz_duration_tilt" default="1000"/>
+        <setting label="32014" type="number" id="ptz_duration_zoom" default="1000"/>
+        <setting label="32010" type="lsep"/>
+        <setting label="32012" type="number" id="ptz_speed_pressed_pan" default="50"/>
+        <setting label="32013" type="number" id="ptz_speed_pressed_tilt" default="50"/>
+        <setting label="32014" type="number" id="ptz_speed_pressed_zoom" default="1"/>
+        <setting label="32011" type="lsep"/>
+        <setting label="32012" type="number" id="ptz_speed_held_pan" default="100"/>
+        <setting label="32013" type="number" id="ptz_speed_held_tilt" default="100"/>
+        <setting label="32014" type="number" id="ptz_speed_held_zoom" default="2"/>
     </category>
 </settings>
