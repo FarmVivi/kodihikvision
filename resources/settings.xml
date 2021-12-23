@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
     <category label="32002">
-        <setting label="32003" type="text" id="hikvision_ip"/>
-        <setting label="32004" type="number" id="hikvision_port" default="8000"/>
-        <setting label="32005" type="number" id="hikvision_rtsp_port" default="1024"/>
-        <setting label="32006" type="text" id="hikvision_username"/>
-        <setting label="32007" type="text" id="hikvision_password"/>
+        <setting label="32004" type="text" id="api_ip"/>
+        <setting label="32005" type="number" id="api_port" default="8000"/>
+        <setting label="32006" type="text" id="api_username"/>
+        <setting label="32007" type="text" id="api_password"/>
+    </category>
+    <category label="32003">
+        <setting label="32004" type="text" id="rtsp_ip"/>
+        <setting label="32005" type="number" id="rtsp_port" default="1024"/>
+        <setting label="32006" type="text" id="rtsp_username"/>
+        <setting label="32007" type="text" id="rtsp_password"/>
+        <setting label="32015" type="text" id="rtsp_path"/>
     </category>
     <category label="32008">
         <setting label="32009" type="lsep"/>

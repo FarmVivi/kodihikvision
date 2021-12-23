@@ -19,20 +19,20 @@ msgstr ""
 #This is a comment
 
 msgctxt "#32002"
-msgid "Hikvision"
-msgstr "Hikvision"
+msgid "API Connection"
+msgstr "Connexion API"
 
 msgctxt "#32003"
+msgid "RTSP Connection"
+msgstr "Connexion RTSP"
+
+msgctxt "#32004"
 msgid "IP/Domain"
 msgstr "IP/Domaine"
 
-msgctxt "#32004"
+msgctxt "#32005"
 msgid "Port"
 msgstr "Port"
-
-msgctxt "#32005"
-msgid "RTSP Port"
-msgstr "RTSP Port"
 
 msgctxt "#32006"
 msgid "Username"
@@ -69,3 +69,7 @@ msgstr "Haut-Bas"
 msgctxt "#32014"
 msgid "Zoom"
 msgstr "Zoom"
+
+msgctxt "#32015"
+msgid "Path"
+msgstr "Chemin"

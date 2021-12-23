@@ -1,11 +1,12 @@
 import settings
-import hikvisionapi
+from resources.lib import hikvisionapi
 
 
 def getCamera():
     return hikvisionapi.Client(
-        'http://' + settings.getSetting('hikvision_ip') + ':' + settings.getSetting('hikvision_port'),
-        settings.getSetting('hikvision_username'), settings.getSetting('hikvision_password'))
+        'http://' + settings.getSettingString('api_ip') +
+        ':' + str(settings.getSettingInt('api_port')),
+        settings.getSettingString('api_username'), settings.getSettingString('api_password'))
 
 
 def move(pan, tilt, zoom, duration):
@@ -22,48 +23,60 @@ def move(pan, tilt, zoom, duration):
 
 
 def pressed_right():
-    move(int(settings.getSetting('ptz_speed_pressed_pan')), 0, 0, int(settings.getSetting('ptz_duration_pan')))
+    move(settings.getSettingInt('ptz_speed_pressed_pan'),
+         0, 0, settings.getSettingInt('ptz_duration_pan'))
 
 
 def pressed_left():
-    move(-int(settings.getSetting('ptz_speed_pressed_pan')), 0, 0, int(settings.getSetting('ptz_duration_pan')))
+    move(-settings.getSettingInt('ptz_speed_pressed_pan'),
+         0, 0, settings.getSettingInt('ptz_duration_pan'))
 
 
 def pressed_up():
-    move(0, int(settings.getSetting('ptz_speed_pressed_tilt')), 0, int(settings.getSetting('ptz_duration_tilt')))
+    move(0, settings.getSettingInt('ptz_speed_pressed_tilt'),
+         0, settings.getSettingInt('ptz_duration_tilt'))
 
 
 def pressed_down():
-    move(0, -int(settings.getSetting('ptz_speed_pressed_tilt')), 0, int(settings.getSetting('ptz_duration_tilt')))
+    move(0, -settings.getSettingInt('ptz_speed_pressed_tilt'),
+         0, settings.getSettingInt('ptz_duration_tilt'))
 
 
 def pressed_zoom_in():
-    move(0, 0, int(settings.getSetting('ptz_speed_pressed_zoom')), int(settings.getSetting('ptz_duration_zoom')))
+    move(0, 0, settings.getSettingInt('ptz_speed_pressed_zoom'),
+         settings.getSettingInt('ptz_duration_zoom'))
 
 
 def pressed_zoom_out():
-    move(0, 0, -int(settings.getSetting('ptz_speed_pressed_zoom')), int(settings.getSetting('ptz_duration_zoom')))
+    move(0, 0, -settings.getSettingInt('ptz_speed_pressed_zoom'),
+         settings.getSettingInt('ptz_duration_zoom'))
 
 
 def held_right():
-    move(int(settings.getSetting('ptz_speed_held_pan')), 0, 0, int(settings.getSetting('ptz_duration_pan')))
+    move(settings.getSettingInt('ptz_speed_held_pan'), 0,
+         0, settings.getSettingInt('ptz_duration_pan'))
 
 
 def held_left():
-    move(-int(settings.getSetting('ptz_speed_held_pan')), 0, 0, int(settings.getSetting('ptz_duration_pan')))
+    move(-settings.getSettingInt('ptz_speed_held_pan'),
+         0, 0, settings.getSettingInt('ptz_duration_pan'))
 
 
 def held_up():
-    move(0, int(settings.getSetting('ptz_speed_held_tilt')), 0, int(settings.getSetting('ptz_duration_tilt')))
+    move(0, settings.getSettingInt('ptz_speed_held_tilt'),
+         0, settings.getSettingInt('ptz_duration_tilt'))
 
 
 def held_down():
-    move(0, -int(settings.getSetting('ptz_speed_held_tilt')), 0, int(settings.getSetting('ptz_duration_tilt')))
+    move(0, -settings.getSettingInt('ptz_speed_held_tilt'),
+         0, settings.getSettingInt('ptz_duration_tilt'))
 
 
 def held_zoom_in():
-    move(0, 0, int(settings.getSetting('ptz_speed_held_zoom')), int(settings.getSetting('ptz_duration_zoom')))
+    move(0, 0, settings.getSettingInt('ptz_speed_held_zoom'),
+         settings.getSettingInt('ptz_duration_zoom'))
 
 
 def held_zoom_out():
-    move(0, 0, -int(settings.getSetting('ptz_speed_held_zoom')), int(settings.getSetting('ptz_duration_zoom')))
+    move(0, 0, -settings.getSettingInt('ptz_speed_held_zoom'),
+         settings.getSettingInt('ptz_duration_zoom'))

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.farmvivi.hikvision" name="Hikvision" version="0.0.1" provider-name="FarmVivi">
+<addon id="plugin.farmvivi.hikvision" name="Hikvision" version="1.0.0" provider-name="FarmVivi">
     <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" version="2.25.1" />
+        <import addon="script.module.urllib3" version="1.26.4" />
+        <import addon="script.module.certifi" version="2020.12.05" />
+        <import addon="script.module.chardet" version="4.0.0" />
+        <import addon="script.module.idna" version="2.10.0" />
+        <import addon="script.module.xmltodict" version="0.12.0" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>executable</provides>

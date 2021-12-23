@@ -1,22 +1,27 @@
-# coding=utf-8
-
 import xbmc
 import xbmcaddon
-
-from resources.lib import kodilogging
 
 # Keep this file to a minimum, as Kodi
 # doesn't keep a compiled copy of this
 ADDON = xbmcaddon.Addon()
-kodilogging.config()
 
-# Parameters
-hikvision_ip = ADDON.getSettingString('hikvision_ip')
-hikvision_port = ADDON.getSettingInt('hikvision_port')
-hikvision_rtsp_port = ADDON.getSettingInt('hikvision_rtsp_port')
-hikvision_username = ADDON.getSettingString('hikvision_username')
-hikvision_password = ADDON.getSettingString('hikvision_password')
+# Get RTSP settings
+rtsp_ip = ADDON.getSettingString('rtsp_ip')
+rtsp_port = ADDON.getSettingInt('rtsp_port')
+rtsp_username = ADDON.getSettingString('rtsp_username')
+rtsp_password = ADDON.getSettingString('rtsp_password')
+rtsp_path = ADDON.getSettingString('rtsp_path')
+
+# Generate RTSP url
+rtsp_url = 'rtsp://'
+if(rtsp_username != ''):
+    rtsp_url += rtsp_username
+    if(rtsp_password != ''):
+        rtsp_url += ':' + rtsp_password
+    rtsp_url += '@'
+rtsp_url += rtsp_ip + ':' + str(rtsp_port)
+if(rtsp_path != ''):
+    rtsp_url += '/' + rtsp_path
 
 # Play RTSP video feed
-xbmc.Player().play(
-    'rtsp://' + hikvision_username + ':' + hikvision_password + '@' + hikvision_ip + ':' + str(hikvision_rtsp_port))
+xbmc.Player().play(rtsp_url)
